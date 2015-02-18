@@ -1,0 +1,146 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    color: #169BDC;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+section {
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-family: 'Great Vibes', 'Lato', sans-serif;
+    text-align: left;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+#quiz-container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.answer {
+    text-align: left;
+    margin: .3125em auto;
+    width: 450px;
+    font-size: 1.5em;
+    border: 1px solid #169BDC;
+    border-radius: 20px;
+    padding: .3275em .5em;
+    position: relative;
+    overflow: hidden;
+    background: rgba(0,0,0,0);
+    z-index: 100;
+    transition: color .25s;
+    
+}
+
+input {
+    z-index: 10;
+}
+
+.overlay {
+    width: 450px;
+    height: 48px;
+    background: #E00CCE;
+    position: absolute;
+    transform: translate(-462px, -37px); 
+    border-radius: 20px;
+    transition: transform .1s;
+    z-index: -1;
+}
+
+.answer:hover {
+    border: 1px solid #04628F;
+    box-shadow: 0 0 5px 1px #04628F;
+    color: #04628F;
+    transition: color .2s;
+}
+
+.answer.checked > .overlay {
+    transform: translate(-12px, -37px);
+    transition: transform .5s;
+}
+
+
+.answer.checked,
+.answer.checked:hover {
+    color: white;
+}
+
+.checked,
+.checked:hover {
+    border: 1px solid #E00CCE;    
+    box-shadow: none;
+}
+
+.unchecked {
+    color: #8FB0FA;
+    border: 1px solid #8FB0FA;
+}
+
+/* input + label {    
+    border: 1px solid #169BDC;
+    border-radius: 10px;
+}
+
+label {
+    padding: 5px 10px 0 30px ;
+    margin-left: -30px;
+}
+
+input:checked + label {
+    color: tomato;
+    border: 1px solid tomato;
+}
+*/
+
+#next, 
+#reset {
+    width: 200px;
+    border: none;
+    color: white;
+    background: #169BDC;
+    border: 1px solid #169BDC;
+    border-radius: 10px;
+    font-size: 1.5em;
+    padding: .5em 0;
+    cursor: pointer;
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+
+#next:disabled {
+    cursor: default;
+    background: #8FB0FA;
+    border: 1px solid #8FB0FA;
+}
+
+#next:disabled:hover {
+
+}
+
+#next:enabled:hover {
+    background: #3DACE1;
+    border: 1px solid #3DACE1;
+}
+
+#reset {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
