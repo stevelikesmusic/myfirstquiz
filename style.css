@@ -133,7 +133,8 @@ input:checked + label {
 
 }
 
-#next:enabled:hover {
+#next:enabled:hover,
+#reset:hover {
     background: #3DACE1;
     border: 1px solid #3DACE1;
 }

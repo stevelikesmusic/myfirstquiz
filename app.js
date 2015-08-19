@@ -58,7 +58,7 @@ function addQuestion(questions) {
         label = "",
         i = 0;
     
-    // Diable next button 
+    // Disable next button 
     nextButton.disabled = true;
     
     // Display question heading
